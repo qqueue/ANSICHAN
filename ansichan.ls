@@ -82,6 +82,8 @@ clip = ->
 
 out = new stream.PassThrough
 
+THREAD = process.env"THREAD"
+
 cursor = ansi out, {+enabled}
 
 es = new EventSource "http://fountain.hakase.org/v1/#BOARD/stream/"
@@ -91,6 +93,9 @@ es = new EventSource "http://fountain.hakase.org/v1/#BOARD/stream/"
 Bacon.from-event-target es, \new-posts, (.data) >> JSON.parse
   .flat-map ->
     Bacon.from-array it.sort (a, b) -> a.no - b.no
+  .filter ->
+    # filter by thread if specified
+    if THREAD? then (""+it.resto) is THREAD else true
   .flat-map ->
     Bacon.from-node-callback download-img, it
   .on-value (post) !->
