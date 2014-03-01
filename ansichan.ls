@@ -223,7 +223,6 @@ net.create-server (client) !->
     console.log "have #clients clients!"
   client.on \error !->
     console.error "client errored!" it
-    clients--
     out.unpipe client
     console.log "have #clients clients!"
 
