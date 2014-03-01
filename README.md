@@ -38,11 +38,10 @@ You can run ANSICHAN locally (along with a local copy of [fountain][0] and
     npm install
     sudo npm install -g LiveScript
     lsc -cb ansichan.ls
-    node ansichan.js
+    BOARD="a" PORT="4751" node ansichan.js
 
 By default, ANSICHAN will run against fountain.hakase.org, and stream /a/ to
-port 4751. Currently there's no way to edit these settings except for
-the source itself.
+port 4751. These can be controlled by the associated environment variables.
 
 # License
 
