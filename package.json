@@ -1,0 +1,14 @@
+{
+  "name": "ansichan",
+  "version": "0.0.1",
+  "description": "streaming 4chan in your terminal. welcome to the future",
+  "dependencies": {
+    "ansi": "0.2.1",
+    "canvas": "1.1.3",
+    "request": "2.33.0",
+    "ent": "0.1.0",
+    "eventsource": "0.0.10",
+    "baconjs": "0.7.2",
+    "telnet": "0.0.1"
+  }
+}
