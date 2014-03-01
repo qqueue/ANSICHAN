@@ -43,6 +43,10 @@ You can run ANSICHAN locally (along with a local copy of [fountain][0] and
 By default, ANSICHAN will run against fountain.hakase.org, and stream /a/ to
 port 4751. These can be controlled by the associated environment variables.
 
+If there's a specific thread you want to watch, use the `THREAD` envar:
+
+    BOARD="g" PORT="4752" THREAD="40586640" node ansichan.js
+
 # License
 
 [Unlicense][1], except for the image-drawing code adapted from [ansi-canvas][2],
