@@ -139,7 +139,7 @@ Bacon.from-event-target es, \new-posts, (.data) >> JSON.parse
       h = 0
       margin = []
 
-    cursor.write \| .reset!horizontal-absolute 80 .write '│\n'
+    cursor.write \│ .reset!horizontal-absolute 80 .write '│\n'
 
     com = wrap [78 - m for m in margin], 76 text-content post.com
 
