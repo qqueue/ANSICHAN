@@ -3,7 +3,6 @@ require! {
   Canvas : canvas
   request
   ent
-  async
   util
   EventSource: \eventsource
   Bacon: baconjs
@@ -12,7 +11,7 @@ require! {
   stream
 }
 
-BOARD = \a
+BOARD = process.env"BOARD" || \a
 
 text-content = ->
   (it || '')replace /<br>/g \\n .replace /<[^>]+>/g '' |> ent.decode
@@ -229,6 +228,6 @@ net.create-server (client) !->
   console.log "have #clients clients!"
 
   client.write "Welcome to ansichan!\n"
-.listen 4751
+.listen process.env"PORT" || 4751
 
 
