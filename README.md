@@ -14,11 +14,11 @@
 ANSICHAN fills your sad-looking terminal emulators on your riced-out GNU+Linux
 desktop with the fountain of 4chan. Jack into /a/ at:
 
-    nc fountain.4chan.org 4751
+    nc fountain.hakase.org 4751
 
 and /g/ at:
 
-    nc fountain.4chan.org 4752
+    nc fountain.hakase.org 4752
 
 `telnet` will probably work too, but ANSICHAN currently just spits UTF-8
 over TCP, so telnet might not like everything it hears.
